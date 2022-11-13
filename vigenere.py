@@ -46,7 +46,7 @@ def findkey(c, kl):
         for i in range(0,26):
             count = 0
             for j in string:
-                count +=  P[j] * W[string[(string.index(j) - i) % 26]]
+                count +=  P[j] * W[string[(ord(j) - ord('A') - i) % 26]]
             list1.append(abs(count - 0.066))
           
         print(string[list1.index(min(list1))],end ='')
