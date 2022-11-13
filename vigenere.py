@@ -31,7 +31,6 @@ def findkey(c, kl):
          'M':0.024,'N':0.067,'O':0.075,'P':0.019,'Q':0.001,'R':0.060,
          'S':0.063,'T':0.091,'U':0.028,'V':0.010,'W':0.023,'X':0.001,
          'Y':0.020,'Z':0.001}
-    count = 0
     n = len(c)
     key = []
 
@@ -45,9 +44,9 @@ def findkey(c, kl):
         
         list1 = []
         for i in range(0,26):
+            count = 0
             for j in string:
                 count +=  P[j] * W[string[(string.index(j) - i) % 26]]
             list1.append(abs(count - 0.066))
-            count = 0
           
         print(string[list1.index(min(list1))],end ='')
