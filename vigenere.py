@@ -1,6 +1,5 @@
 string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
 
-
 def findkeylen(c):
     '''limit key len <= 13'''
 
